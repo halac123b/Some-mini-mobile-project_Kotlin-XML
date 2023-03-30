@@ -1,0 +1,20 @@
+package com.halac123b.xml_tutorial
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val btnExplore = findViewById<Button>(R.id.btnExplore);
+        btnExplore.setOnClickListener({
+            val nextPage = Intent(this, HomeActivity::class.java);
+            startActivity(nextPage);
+            finish();
+        })
+    }
+}
